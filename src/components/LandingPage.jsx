@@ -15,7 +15,7 @@ function SCSeal({ size = 120, className = '' }) {
         <path id={arcId} d="M100,17 A83,83 0 0,1 183,100 A83,83 0 0,1 100,183 A83,83 0 0,1 17,100 A83,83 0 0,1 100,17"/>
       </defs>
       <text fontFamily="'Instrument Sans', Arial, sans-serif" fontSize="8.5" fill="#B09A3E" letterSpacing="4.5">
-        <textPath href={`#${arcId}`} startOffset="5%">SC FINANCIAL AND LIFE SERVICES Â· EST MMXXVI Â·</textPath>
+        <textPath href={`#${arcId}`} startOffset="5%">SC FINANCIAL AND LIFE SERVICES · EST MMXXVI ·</textPath>
       </text>
     </svg>
   )
@@ -58,7 +58,7 @@ export default function LandingPage({ onApply }) {
   return (
     <div className="lp">
 
-      {/* ââ NAV ââ */}
+      {/* ── NAV ── */}
       <header className={`lp-nav${scrolled ? ' scrolled' : ''}`}>
         <div className="lp-nav-inner">
           <button className="lp-logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} aria-label="SC Financial home">
@@ -92,24 +92,24 @@ export default function LandingPage({ onApply }) {
             <button onClick={() => scrollTo('services')}>Services</button>
             <button onClick={() => scrollTo('process')}>How It Works</button>
             <button onClick={() => scrollTo('contact')}>Contact</button>
-            <button className="lp-mobile-apply" onClick={onApply}>Begin Application â</button>
+            <button className="lp-mobile-apply" onClick={onApply}>Begin Application →</button>
           </div>
         )}
       </header>
 
-      {/* ââ HERO ââ */}
+      {/* ── HERO ── */}
       <section className="lp-hero">
         <div className="lp-hero-watermark" aria-hidden="true">
           <SCSeal size={600} />
         </div>
         <div className="lp-hero-content lp-container">
-          <p className="lp-hero-eyebrow">PRUDENCE Â· PROTECTION Â· PROSPERITY</p>
+          <p className="lp-hero-eyebrow">PRUDENCE · PROTECTION · PROSPERITY</p>
           <h1 className="lp-hero-headline">
             Stewards of Your<br/>
             <em>Financial Life.</em>
           </h1>
           <p className="lp-hero-sub">
-            We guide families and individuals toward lasting security â
+            We guide families and individuals toward lasting security —
             with wisdom, integrity, and an unwavering commitment to your future.
           </p>
           <div className="lp-hero-actions">
@@ -122,15 +122,15 @@ export default function LandingPage({ onApply }) {
           </div>
           <div className="lp-hero-trust">
             <span><ShieldIcon/> Licensed in all 50 States</span>
-            <span className="lp-trust-dot">Â·</span>
+            <span className="lp-trust-dot">·</span>
             <span>Est. MMXXVI</span>
-            <span className="lp-trust-dot">Â·</span>
+            <span className="lp-trust-dot">·</span>
             <span><LockIcon/> Bank-Level Encryption</span>
           </div>
         </div>
       </section>
 
-      {/* ââ THREE PILLARS ââ */}
+      {/* ── THREE PILLARS ── */}
       <section className="lp-pillars" id="about">
         <div className="lp-container">
           <div className="lp-section-header">
@@ -143,12 +143,12 @@ export default function LandingPage({ onApply }) {
               {
                 roman: 'I',
                 title: 'Prudence',
-                desc: 'Every recommendation we make is grounded in careful analysis, disciplined strategy, and alignment with your long-term interests. We never lead with product â we lead with purpose.'
+                desc: 'Every recommendation we make is grounded in careful analysis, disciplined strategy, and alignment with your long-term interests. We never lead with product — we lead with purpose.'
               },
               {
                 roman: 'II',
                 title: 'Protection',
-                desc: 'Life changes unexpectedly. We ensure the people and values you hold dear are never left without the support they need â today, tomorrow, and for generations to come.'
+                desc: 'Life changes unexpectedly. We ensure the people and values you hold dear are never left without the support they need — today, tomorrow, and for generations to come.'
               },
               {
                 roman: 'III',
@@ -167,7 +167,7 @@ export default function LandingPage({ onApply }) {
         </div>
       </section>
 
-      {/* ââ PHILOSOPHY QUOTE ââ */}
+      {/* ── PHILOSOPHY QUOTE ── */}
       <section className="lp-philosophy">
         <div className="lp-container">
           <div className="lp-philosophy-inner">
@@ -176,18 +176,18 @@ export default function LandingPage({ onApply }) {
               The foundation of a financial life is not yield,<br/>
               but the steadfast stewardship of what is entrusted.
             </blockquote>
-            <p className="lp-philosophy-attr">â The SC Financial Standard of Care</p>
+            <p className="lp-philosophy-attr">— The SC Financial Standard of Care</p>
           </div>
         </div>
       </section>
 
-      {/* ââ SERVICES ââ */}
+      {/* ── SERVICES ── */}
       <section className="lp-services" id="services">
         <div className="lp-container">
           <div className="lp-section-header">
             <p className="lp-eyebrow">What We Offer</p>
             <h2 className="lp-section-title">Comprehensive Life Insurance Solutions</h2>
-            <p className="lp-section-sub">From foundational protection to sophisticated wealth-building strategies â we meet you where you are.</p>
+            <p className="lp-section-sub">From foundational protection to sophisticated wealth-building strategies — we meet you where you are.</p>
           </div>
           <div className="lp-services-grid">
             {[
@@ -256,7 +256,7 @@ export default function LandingPage({ onApply }) {
         </div>
       </section>
 
-      {/* ââ STATS ââ */}
+      {/* ── STATS ── */}
       <section className="lp-stats">
         <div className="lp-container">
           <div className="lp-section-header lp-section-header--light">
@@ -280,7 +280,7 @@ export default function LandingPage({ onApply }) {
         </div>
       </section>
 
-      {/* ââ PROCESS ââ */}
+      {/* ── PROCESS ── */}
       <section className="lp-process" id="process">
         <div className="lp-container">
           <div className="lp-section-header">
@@ -291,7 +291,7 @@ export default function LandingPage({ onApply }) {
           <div className="lp-process-steps">
             {[
               { num: '01', title: 'Consult',  desc: 'We listen first. Understanding your family, your goals, and your concerns before any recommendation is made.' },
-              { num: '02', title: 'Design',   desc: 'We architect a coverage plan tailored to your needs â not a one-size-fits-all product pushed for commission.' },
+              { num: '02', title: 'Design',   desc: 'We architect a coverage plan tailored to your needs — not a one-size-fits-all product pushed for commission.' },
               { num: '03', title: 'Apply',    desc: 'Our streamlined digital application takes about 10 minutes. We walk with you every step of the way.' },
               { num: '04', title: 'Protect',  desc: 'Coverage in place. Peace of mind delivered. An ongoing relationship built on trust and regular review.' }
             ].map(s => (
@@ -305,7 +305,7 @@ export default function LandingPage({ onApply }) {
         </div>
       </section>
 
-      {/* ââ TESTIMONIALS ââ */}
+      {/* ── TESTIMONIALS ── */}
       <section className="lp-testimonials">
         <div className="lp-container">
           <div className="lp-section-header">
@@ -318,32 +318,32 @@ export default function LandingPage({ onApply }) {
                 quote: "After years of putting it off, SC Financial made the process effortless. They found me coverage I could actually afford and helped me understand exactly what I was signing.",
                 name: "Robert M.",
                 location: "Dallas, TX",
-                policy: "20-Year Term Â· $500,000",
+                policy: "20-Year Term · $500,000",
                 initial: "R"
               },
               {
-                quote: "They took the time to truly understand our family's situation. No pressure, no rush. We feel genuinely protected now â and we know exactly who to call if anything changes.",
+                quote: "They took the time to truly understand our family's situation. No pressure, no rush. We feel genuinely protected now — and we know exactly who to call if anything changes.",
                 name: "Jennifer & Marcus T.",
                 location: "Atlanta, GA",
-                policy: "Whole Life Â· $1,000,000",
+                policy: "Whole Life · $1,000,000",
                 initial: "J"
               },
               {
                 quote: "As a widow, I needed guidance I could trust completely. SC Financial was patient, thorough, and showed real care for my outcome. That matters more than anything.",
                 name: "Patricia W.",
                 location: "Chicago, IL",
-                policy: "Final Expense Â· $50,000",
+                policy: "Final Expense · $50,000",
                 initial: "P"
               }
             ].map(t => (
               <div className="lp-testimonial-card" key={t.name}>
-                <div className="lp-testimonial-stars">âââââ</div>
+                <div className="lp-testimonial-stars">★★★★★</div>
                 <blockquote className="lp-testimonial-quote">"{t.quote}"</blockquote>
                 <div className="lp-testimonial-footer">
                   <div className="lp-testimonial-avatar">{t.initial}</div>
                   <div>
                     <p className="lp-testimonial-name">{t.name}</p>
-                    <p className="lp-testimonial-meta">{t.location} Â· {t.policy}</p>
+                    <p className="lp-testimonial-meta">{t.location} · {t.policy}</p>
                   </div>
                 </div>
               </div>
@@ -352,7 +352,7 @@ export default function LandingPage({ onApply }) {
         </div>
       </section>
 
-      {/* ââ CTA BANNER ââ */}
+      {/* ── CTA BANNER ── */}
       <section className="lp-cta-banner" id="contact">
         <div className="lp-container">
           <div className="lp-cta-inner">
@@ -363,14 +363,14 @@ export default function LandingPage({ onApply }) {
               <h2 className="lp-cta-title">Ready to Secure Your Family's Future?</h2>
               <p className="lp-cta-sub">Begin your application today. Takes about 10 minutes. Fully secure and digital.</p>
               <button className="lp-btn-gold" onClick={onApply}>
-                Begin Your Application â
+                Begin Your Application →
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ââ FOOTER ââ */}
+      {/* ── FOOTER ── */}
       <footer className="lp-footer">
         <div className="lp-container">
           <div className="lp-footer-top">
@@ -406,7 +406,7 @@ export default function LandingPage({ onApply }) {
             </div>
           </div>
           <div className="lp-footer-bottom">
-            <p>Â© 2026 SC Financial Life Group. All rights reserved. Licensed Insurance Brokerage. <em>Stewards of Your Financial Life.</em></p>
+            <p>© 2026 SC Financial Life Group. All rights reserved. Licensed Insurance Brokerage. <em>Stewards of Your Financial Life.</em></p>
             <div className="lp-footer-legal">
               <span>Privacy Policy</span>
               <span>Terms of Service</span>
