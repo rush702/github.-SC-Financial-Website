@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="100" fill="#061545"/>
+  <circle cx="100" cy="100" r="95.5" fill="none" stroke="#B09A3E" stroke-width="1.2"/>
+  <circle cx="100" cy="100" r="80" fill="none" stroke="#B09A3E" stroke-width="0.6" stroke-dasharray="2.5 2"/>
+  <text x="100" y="108" text-anchor="middle" font-family="Georgia,serif" font-size="46" font-weight="700" fill="white" letter-spacing="5">SC</text>
+  <path d="M100 120 L104 127 L100 134 L96 127 Z" fill="#B09A3E"/>
+  <text x="100" y="155" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#B09A3E" letter-spacing="5">EST. MMXXVI</text>
+  <defs>
+    <path id="a" d="M100,17 A83,83 0 0,1 183,100 A83,83 0 0,1 100,183 A83,83 0 0,1 17,100 A83,83 0 0,1 100,17"/>
+  </defs>
+  <text font-family="Arial,sans-serif" font-size="8.5" fill="#B09A3E" letter-spacing="4.5">
+    <textPath href="#a" startOffset="5%">SC FINANCIAL AND LIFE SERVICES Â· EST MMXXVI Â·</textPath>
+  </text>
+</svg>
