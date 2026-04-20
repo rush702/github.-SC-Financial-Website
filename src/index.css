@@ -50,7 +50,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ââ ANIMATIONS ââ */
+/* ── ANIMATIONS ── */
 @keyframes slideInUp {
   from { opacity: 0; transform: translateY(48px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -87,7 +87,7 @@ body {
   to   { stroke-dashoffset: 0; }
 }
 
-/* ââ LAYOUT ââ */
+/* ── LAYOUT ── */
 .app {
   min-height: 100vh;
   display: flex;
@@ -108,7 +108,7 @@ body {
 .step-container.forward  { animation: slideInUp   0.38s cubic-bezier(0.16,1,0.3,1) both; }
 .step-container.backward { animation: slideInDown 0.38s cubic-bezier(0.16,1,0.3,1) both; }
 
-/* ââ PROGRESS BAR ââ */
+/* ── PROGRESS BAR ── */
 .progress-wrap {
   width: 100%;
   max-width: 680px;
@@ -152,7 +152,7 @@ body {
   box-shadow: 0 0 10px currentColor;
 }
 
-/* ââ SECTION BADGE ââ */
+/* ── SECTION BADGE ── */
 .section-badge {
   display: inline-flex;
   align-items: center;
@@ -170,7 +170,7 @@ body {
   font-size: 0.9rem;
 }
 
-/* ââ STEP COMMON ââ */
+/* ── STEP COMMON ── */
 .step { padding: 8px 0 32px; }
 
 .step-question {
@@ -191,7 +191,7 @@ body {
 
 .step-hint a { color: var(--primary); text-decoration: none; }
 
-/* ââ OPTION CARDS ââ */
+/* ── OPTION CARDS ── */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(152px, 1fr));
@@ -238,7 +238,7 @@ body {
   box-shadow: 0 0 0 1px var(--border-selected), 0 8px 28px rgba(99,102,241,0.18);
 }
 .option-card.selected::after {
-  content: 'â';
+  content: '✓';
   position: absolute;
   top: 9px; right: 12px;
   font-size: 0.7rem;
@@ -264,7 +264,7 @@ body {
 .option-card.full .card-icon  { margin-bottom: 0; font-size: 1.6rem; flex-shrink: 0; }
 .option-card.full .card-label { font-size: 1rem; }
 
-/* ââ HEALTH EMOJI SCALE ââ */
+/* ── HEALTH EMOJI SCALE ── */
 .health-scale {
   display: flex;
   gap: 10px;
@@ -296,7 +296,7 @@ body {
 .health-opt:hover .health-emoji { transform: scale(1.3); }
 .health-label { font-size: 0.7rem; font-weight: 600; color: var(--text-muted); }
 
-/* ââ CHIP MULTI-SELECT ââ */
+/* ── CHIP MULTI-SELECT ── */
 .chip-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -345,7 +345,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* ââ INPUTS ââ */
+/* ── INPUTS ── */
 .field-group { margin-bottom: 18px; }
 .field-row {
   display: grid;
@@ -424,7 +424,7 @@ select.input {
   gap: 5px;
 }
 
-/* ââ RANGE SLIDER ââ */
+/* ── RANGE SLIDER ── */
 .slider-wrap { margin-bottom: 28px; }
 .slider-value {
   font-size: clamp(2.2rem, 5vw, 3.2rem);
@@ -493,7 +493,7 @@ select.input {
   color: var(--primary);
 }
 
-/* ââ TOGGLE SWITCH ââ */
+/* ── TOGGLE SWITCH ── */
 .toggle-row {
   display: flex;
   align-items: flex-start;
@@ -544,7 +544,7 @@ select.input {
 .toggle-required .toggle-switch { background: var(--primary); }
 .toggle-required .toggle-switch::after { transform: translateX(20px); }
 
-/* ââ BUTTONS ââ */
+/* ── BUTTONS ── */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -624,7 +624,7 @@ select.input {
 }
 .btn-link:hover { color: var(--text); }
 
-/* ââ STEP ACTIONS ââ */
+/* ── STEP ACTIONS ── */
 .step-actions {
   display: flex;
   align-items: center;
@@ -651,7 +651,7 @@ kbd {
   font-size: 0.72rem;
 }
 
-/* ââ YES/NO SECTION REVEAL ââ */
+/* ── YES/NO SECTION REVEAL ── */
 .reveal-panel {
   background: rgba(99,102,241,0.06);
   border: 1px solid rgba(99,102,241,0.2);
@@ -662,7 +662,7 @@ kbd {
   animation: scaleIn 0.25s ease both;
 }
 
-/* ââ WELCOME ââ */
+/* ── WELCOME ── */
 .welcome {
   text-align: center;
   padding: 32px 16px 48px;
@@ -757,7 +757,7 @@ kbd {
   gap: 6px;
 }
 
-/* ââ REVIEW ââ */
+/* ── REVIEW ── */
 .review-sections { margin-bottom: 28px; }
 .review-card {
   background: var(--bg-card);
@@ -811,7 +811,7 @@ kbd {
 .review-key { font-size: 0.83rem; color: var(--text-muted); }
 .review-val { font-size: 0.875rem; font-weight: 600; text-align: right; max-width: 58%; word-break: break-word; }
 
-/* ââ AUTHORIZATION ââ */
+/* ── AUTHORIZATION ── */
 .auth-intro {
   background: linear-gradient(135deg, rgba(99,102,241,0.12), rgba(139,92,246,0.08));
   border: 1px solid rgba(99,102,241,0.25);
@@ -841,7 +841,7 @@ kbd {
   border-radius: 6px;
 }
 
-/* ââ E-SIGN ââ */
+/* ── E-SIGN ── */
 .esign-box {
   background: var(--bg-card);
   border: 1.5px solid var(--border);
@@ -908,7 +908,7 @@ kbd {
   gap: 6px;
 }
 
-/* ââ SUCCESS ââ */
+/* ── SUCCESS ── */
 .success-wrap {
   text-align: center;
   padding: 48px 16px;
@@ -969,7 +969,7 @@ kbd {
 .next-step strong { display: block; font-size: 0.875rem; margin-bottom: 2px; }
 .next-step span { font-size: 0.78rem; color: var(--text-muted); line-height: 1.5; }
 
-/* ââ MISC UTILS ââ */
+/* ── MISC UTILS ── */
 .divider {
   border: none;
   border-top: 1px solid var(--border);
@@ -1016,13 +1016,13 @@ kbd {
   line-height: 1.55;
 }
 
-/* ââââââââââââââââââââââââââââââââââââââââââ
-   MOBILE â comprehensive overhaul
-   Target: phones â¤ 640px
-   ââââââââââââââââââââââââââââââââââââââââââ */
+/* ══════════════════════════════════════════
+   MOBILE — comprehensive overhaul
+   Target: phones ≤ 640px
+   ══════════════════════════════════════════ */
 @media (max-width: 640px) {
 
-  /* ââ Page layout ââ */
+  /* ── Page layout ── */
   html, body, #root { height: 100%; }
 
   body {
@@ -1031,13 +1031,13 @@ kbd {
   }
 
   .app {
-    /* no horizontal padding here â children add their own */
+    /* no horizontal padding here — children add their own */
     padding: 0;
     padding-bottom: 0;        /* fixed bar handles bottom space */
     align-items: stretch;     /* children span full width */
   }
 
-  /* ââ Progress bar â sticky at top ââ */
+  /* ── Progress bar — sticky at top ── */
   .progress-wrap {
     position: sticky;
     top: 0;
@@ -1053,7 +1053,7 @@ kbd {
     padding-top: max(10px, env(safe-area-inset-top, 10px));
   }
 
-  /* ââ Step container ââ */
+  /* ── Step container ── */
   .step-container {
     padding: 16px 18px 0;
     justify-content: flex-start;
@@ -1062,7 +1062,7 @@ kbd {
     padding-bottom: 104px;
   }
 
-  /* ââ Step action bar â fixed at bottom ââ */
+  /* ── Step action bar — fixed at bottom ── */
   .step-actions {
     position: fixed;
     bottom: 0;
@@ -1087,7 +1087,7 @@ kbd {
     justify-content: center;
   }
 
-  /* Back ghost button â compact on mobile */
+  /* Back ghost button — compact on mobile */
   .step-actions .btn-ghost {
     flex-shrink: 0;
     min-width: 64px;
@@ -1102,7 +1102,7 @@ kbd {
     display: contents; /* let children participate in step-actions flex */
   }
 
-  /* ââ Typography ââ */
+  /* ── Typography ── */
   .step-question {
     font-size: clamp(1.55rem, 7vw, 2rem);
     margin-bottom: 8px;
@@ -1112,7 +1112,7 @@ kbd {
     margin-bottom: 26px;
   }
 
-  /* ââ Inputs â 16px prevents iOS auto-zoom ââ */
+  /* ── Inputs — 16px prevents iOS auto-zoom ── */
   .input,
   select.input,
   textarea.input {
@@ -1125,12 +1125,12 @@ kbd {
   /* Esign input stays large/stylistic */
   .esign-input { font-size: 1.3rem !important; min-height: 60px; }
 
-  /* ââ Buttons â 48px min touch target ââ */
+  /* ── Buttons — 48px min touch target ── */
   .btn-primary  { min-height: 52px; font-size: 1rem; padding: 14px 24px; }
   .btn-secondary{ min-height: 48px; font-size: 0.9rem; }
   .btn-ghost    { min-height: 44px; }
 
-  /* ââ Cards ââ */
+  /* ── Cards ── */
   .cards-grid         { grid-template-columns: 1fr 1fr; gap: 10px; }
   .cards-grid.four    { grid-template-columns: 1fr 1fr; }
   .cards-grid.three   { grid-template-columns: 1fr 1fr; }
@@ -1140,23 +1140,23 @@ kbd {
   .option-card.large  { padding: 20px 16px; }
   .option-card.full   { padding: 14px 16px; }
 
-  /* ââ Health emoji scale â 3 per row ââ */
+  /* ── Health emoji scale — 3 per row ── */
   .health-scale { flex-wrap: wrap; gap: 8px; }
   .health-opt   { flex: 0 0 calc(33.333% - 6px); padding: 14px 6px 12px; }
   .health-emoji { font-size: 1.8rem; }
 
-  /* ââ Chips â bigger touch targets ââ */
+  /* ── Chips — bigger touch targets ── */
   .chip {
     min-height: 40px;
     padding: 10px 16px;
     font-size: 0.85rem;
   }
 
-  /* ââ Field rows collapse to single column ââ */
+  /* ── Field rows collapse to single column ── */
   .field-row,
   .field-row.three { grid-template-columns: 1fr; gap: 12px; }
 
-  /* ââ Range slider â bigger thumb for fat fingers ââ */
+  /* ── Range slider — bigger thumb for fat fingers ── */
   .range-input::-webkit-slider-thumb {
     width: 32px;
     height: 32px;
@@ -1166,10 +1166,10 @@ kbd {
     height: 32px;
   }
 
-  /* ââ Hide desktop keyboard shortcut hint ââ */
+  /* ── Hide desktop keyboard shortcut hint ── */
   .enter-hint { display: none; }
 
-  /* ââ Welcome screen â full-screen mobile feel ââ */
+  /* ── Welcome screen — full-screen mobile feel ── */
   .welcome {
     padding: 20px 0 32px;
     display: flex;
@@ -1194,45 +1194,45 @@ kbd {
   }
   .welcome-trust { font-size: 0.75rem; }
 
-  /* ââ Authorization toggles ââ */
+  /* ── Authorization toggles ── */
   .toggle-row { padding: 14px 16px; gap: 14px; }
   .toggle-text strong { font-size: 0.875rem; }
 
-  /* ââ Esign box ââ */
+  /* ── Esign box ── */
   .esign-box { padding: 20px 16px; }
   .esign-confirm { padding: 14px 16px; }
 
-  /* ââ Review ââ */
+  /* ── Review ── */
   .review-card { padding: 16px 16px; }
   .review-val  { max-width: 52%; font-size: 0.82rem; }
   .review-key  { font-size: 0.8rem; }
 
-  /* ââ Slider value display ââ */
+  /* ── Slider value display ── */
   .slider-value { font-size: clamp(1.8rem, 8vw, 2.6rem); }
 
-  /* ââ Success ââ */
+  /* ── Success ── */
   .success-wrap { padding: 32px 0; }
   .success-icon { width: 80px; height: 80px; font-size: 2rem; }
   .success-title { font-size: clamp(1.8rem, 7vw, 2.4rem); }
   .next-step { padding: 13px 14px; }
 
-  /* ââ Info / warning boxes ââ */
+  /* ── Info / warning boxes ── */
   .info-box, .warning-box { font-size: 0.8rem; }
 
-  /* ââ Reveal panels ââ */
+  /* ── Reveal panels ── */
   .reveal-panel { padding: 16px; }
 
-  /* ââ Section badge ââ */
+  /* ── Section badge ── */
   .section-badge { font-size: 0.68rem; }
 
-  /* ââ Preset buttons ââ */
+  /* ── Preset buttons ── */
   .preset-btn { min-height: 40px; font-size: 0.8rem; }
 
-  /* ââ Presets wrap tighter ââ */
+  /* ── Presets wrap tighter ── */
   .presets { gap: 7px; }
 }
 
-/* ââ Extra-small phones (â¤ 375px) ââ */
+/* ── Extra-small phones (≤ 375px) ── */
 @media (max-width: 375px) {
   .step-container { padding: 14px 14px 0; }
   .step-actions { padding: 10px 14px; padding-bottom: max(12px, env(safe-area-inset-bottom, 12px)); }
@@ -1241,7 +1241,7 @@ kbd {
   .welcome-stats { justify-content: space-around; }
 }
 
-/* ââ Tablet (641px â 900px) ââ */
+/* ── Tablet (641px – 900px) ── */
 @media (min-width: 641px) and (max-width: 900px) {
   .app { padding: 0 28px 60px; }
   .step-container { padding-top: 20px; }
@@ -1249,7 +1249,7 @@ kbd {
   .welcome-headline { font-size: clamp(2.5rem, 5vw, 3.5rem); }
 }
 
-/* ââ Landscape mobile â tighten vertical spacing ââ */
+/* ── Landscape mobile — tighten vertical spacing ── */
 @media (max-width: 640px) and (orientation: landscape) {
   .step-container { padding-bottom: 80px; }
   .step-question  { font-size: 1.4rem; margin-bottom: 6px; }
@@ -1261,10 +1261,10 @@ kbd {
   .health-opt     { flex: 0 0 calc(20% - 8px); }
 }
 
-/* âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
-   LANDING PAGE â SC Financial & Life Services
-   Brand: Midnight Ledger Â· Antique Gold Â· Parchment
-   âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
+/* ═══════════════════════════════════════════════════════════
+   LANDING PAGE — SC Financial & Life Services
+   Brand: Midnight Ledger · Antique Gold · Parchment
+   ═══════════════════════════════════════════════════════════ */
 
 :root {
   --sc-navy:       #061545;
@@ -1295,7 +1295,7 @@ kbd {
   padding: 0 48px;
 }
 
-/* ââ NAV ââ */
+/* ── NAV ── */
 .lp-nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -1445,7 +1445,7 @@ kbd {
   border: none !important;
 }
 
-/* ââ HERO ââ */
+/* ── HERO ── */
 .lp-hero {
   position: relative;
   min-height: 100vh;
@@ -1555,7 +1555,7 @@ kbd {
 }
 .lp-trust-dot { opacity: 0.3; }
 
-/* ââ SHARED BUTTONS ââ */
+/* ── SHARED BUTTONS ── */
 .lp-btn-gold {
   display: inline-flex;
   align-items: center;
@@ -1602,7 +1602,7 @@ kbd {
   background: rgba(255,255,255,0.05);
 }
 
-/* ââ SECTION SHARED ââ */
+/* ── SECTION SHARED ── */
 .lp-section-header {
   margin-bottom: 56px;
   max-width: 620px;
@@ -1647,7 +1647,7 @@ kbd {
   color: var(--sc-ink-light);
 }
 
-/* ââ PILLARS ââ */
+/* ── PILLARS ── */
 .lp-pillars {
   padding: 100px 0;
   background: var(--sc-parchment);
@@ -1696,7 +1696,7 @@ kbd {
   color: var(--sc-ink-light);
 }
 
-/* ââ PHILOSOPHY ââ */
+/* ── PHILOSOPHY ── */
 .lp-philosophy {
   background: var(--sc-navy);
   padding: 100px 48px;
@@ -1732,7 +1732,7 @@ kbd {
   text-transform: uppercase;
 }
 
-/* ââ SERVICES ââ */
+/* ── SERVICES ── */
 .lp-services {
   padding: 100px 0;
   background: var(--sc-cream);
@@ -1784,7 +1784,7 @@ kbd {
 }
 .lp-services-cta { text-align: center; }
 
-/* ââ STATS ââ */
+/* ── STATS ── */
 .lp-stats {
   background: var(--sc-navy);
   padding: 90px 0;
@@ -1831,7 +1831,7 @@ kbd {
   font-style: italic;
 }
 
-/* ââ PROCESS ââ */
+/* ── PROCESS ── */
 .lp-process {
   padding: 100px 0;
   background: var(--sc-parchment);
@@ -1869,7 +1869,7 @@ kbd {
   color: var(--sc-ink-light);
 }
 
-/* ââ TESTIMONIALS ââ */
+/* ── TESTIMONIALS ── */
 .lp-testimonials {
   padding: 100px 0;
   background: var(--sc-cream);
@@ -1939,7 +1939,7 @@ kbd {
   margin-top: 2px;
 }
 
-/* ââ CTA BANNER ââ */
+/* ── CTA BANNER ── */
 .lp-cta-banner {
   background: var(--sc-navy);
   padding: 80px 0;
@@ -1977,7 +1977,7 @@ kbd {
   margin-bottom: 32px;
 }
 
-/* ââ FOOTER ââ */
+/* ── FOOTER ── */
 .lp-footer {
   background: var(--sc-navy-deep);
   padding: 64px 0 0;
@@ -2076,7 +2076,7 @@ kbd {
 }
 .lp-footer-legal span:hover { color: rgba(255,255,255,0.6); }
 
-/* ââ LANDING RESPONSIVE ââ */
+/* ── LANDING RESPONSIVE ── */
 @media (max-width: 1024px) {
   .lp-services-grid { grid-template-columns: repeat(2, 1fr); }
   .lp-stats-grid { grid-template-columns: repeat(2, 1fr); }
