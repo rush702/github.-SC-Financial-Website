@@ -2,13 +2,13 @@ import { useState } from 'react'
 import SectionBadge from '../components/SectionBadge'
 
 const ACTIVITIES = [
-  { id: 'skydiving',   icon: 'ðª', label: 'Skydiving / BASE Jumping',    sub: 'Any jumps in the last 2 years' },
-  { id: 'aviation',    icon: 'âï¸', label: 'Private Aviation',             sub: 'Licensed pilot or frequent private flights' },
-  { id: 'motorsports', icon: 'ðï¸', label: 'Motorsports / Racing',         sub: 'Competitive or high-speed driving' },
-  { id: 'scuba',       icon: 'ð¤¿', label: 'Deep Scuba Diving',            sub: 'Below 100 feet depth' },
-  { id: 'climbing',    icon: 'ð§', label: 'Rock Climbing / Mountaineering', sub: 'Technical climbing or high altitude' },
-  { id: 'bungee',      icon: 'ð¯', label: 'Bungee Jumping',               sub: 'Any bungee activity' },
-  { id: 'combat',      icon: 'ð¥', label: 'Combat Sports',                sub: 'Boxing, MMA, martial arts competition' },
+  { id: 'skydiving',   icon: '🪂', label: 'Skydiving / BASE Jumping',    sub: 'Any jumps in the last 2 years' },
+  { id: 'aviation',    icon: '✈️', label: 'Private Aviation',             sub: 'Licensed pilot or frequent private flights' },
+  { id: 'motorsports', icon: '🏎️', label: 'Motorsports / Racing',         sub: 'Competitive or high-speed driving' },
+  { id: 'scuba',       icon: '🤿', label: 'Deep Scuba Diving',            sub: 'Below 100 feet depth' },
+  { id: 'climbing',    icon: '🧗', label: 'Rock Climbing / Mountaineering', sub: 'Technical climbing or high altitude' },
+  { id: 'bungee',      icon: '🎯', label: 'Bungee Jumping',               sub: 'Any bungee activity' },
+  { id: 'combat',      icon: '🥊', label: 'Combat Sports',                sub: 'Boxing, MMA, martial arts competition' },
 ]
 
 export default function HazardousStep({ formData, onNext, onBack }) {
@@ -53,18 +53,18 @@ export default function HazardousStep({ formData, onNext, onBack }) {
           className={`chip none-chip${noneFlag ? ' selected' : ''}`}
           onClick={selectNone}
         >
-          â None of the Above
+          ✓ None of the Above
         </button>
       </div>
 
       <div className="step-actions">
-        <button className="btn-ghost" onClick={onBack}>â Back</button>
+        <button className="btn-ghost" onClick={onBack}>← Back</button>
         <button
           className="btn-primary"
           onClick={() => onNext({ hazardous: selected })}
           disabled={selected.length === 0 && !noneFlag}
         >
-          Continue â
+          Continue →
         </button>
       </div>
     </div>

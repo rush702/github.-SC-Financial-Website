@@ -4,7 +4,7 @@ import SectionBadge from '../components/SectionBadge'
 const AUTHS = [
   {
     key: 'authMib',
-    icon: 'ðï¸',
+    icon: '🗂️',
     title: 'MIB Group Authorization',
     short: 'Access your Medical Information Bureau report for underwriting.',
     legal: 'I authorize SC Financial Life Group and its carrier partners to obtain information from MIB, Inc. about me. MIB is a membership organization of life and health insurance companies. I understand information in my MIB file may be used to assess my application. I may request my MIB file by contacting MIB at 866-692-6901.',
@@ -12,7 +12,7 @@ const AUTHS = [
   },
   {
     key: 'authRx',
-    icon: 'ð',
+    icon: '💊',
     title: 'Prescription History (IntelliScript)',
     short: 'Access your prescription fill history via Milliman IntelliScript.',
     legal: 'I authorize SC Financial Life Group to obtain a report of my prescription drug history from Milliman IntelliScript (or equivalent prescription data vendor) for the purpose of underwriting my life insurance application. This authorization is valid for 24 months from the date signed.',
@@ -20,7 +20,7 @@ const AUTHS = [
   },
   {
     key: 'authDmv',
-    icon: 'ð',
+    icon: '🚗',
     title: 'Motor Vehicle Record (DMV)',
     short: 'Access your driving record for underwriting as permitted by FCRA.',
     legal: 'I authorize SC Financial Life Group to obtain my Motor Vehicle Record (MVR) from the appropriate state Department of Motor Vehicles. This report will be used solely for insurance underwriting purposes, as permitted under the federal Driver\'s Privacy Protection Act (DPPA) and Fair Credit Reporting Act (FCRA).',
@@ -28,10 +28,10 @@ const AUTHS = [
   },
   {
     key: 'authHipaa',
-    icon: 'ð¥',
+    icon: '🏥',
     title: 'Medical Records (HIPAA)',
     short: 'Authorize release of medical records to complete underwriting.',
-    legal: 'I authorize any physician, medical practitioner, hospital, clinic, pharmacy, or other healthcare provider to release information about my health, medical history, and treatment to SC Financial Life Group and its reinsurers for the purpose of evaluating my application for life insurance. This authorization complies with HIPAA (45 CFR Â§ 164.508) and is valid for 24 months.',
+    legal: 'I authorize any physician, medical practitioner, hospital, clinic, pharmacy, or other healthcare provider to release information about my health, medical history, and treatment to SC Financial Life Group and its reinsurers for the purpose of evaluating my application for life insurance. This authorization complies with HIPAA (45 CFR § 164.508) and is valid for 24 months.',
     required: true,
   },
 ]
@@ -64,7 +64,7 @@ export default function AuthorizationStep({ formData, onNext, onBack }) {
             <span>{auth.short}</span>
             <div className="auth-expandable">
               <details>
-                <summary>Read full authorization text â</summary>
+                <summary>Read full authorization text →</summary>
                 <p className="legal">{auth.legal}</p>
               </details>
             </div>
@@ -78,9 +78,9 @@ export default function AuthorizationStep({ formData, onNext, onBack }) {
       </p>
 
       <div className="step-actions">
-        <button className="btn-ghost" onClick={onBack}>â Back</button>
+        <button className="btn-ghost" onClick={onBack}>← Back</button>
         <button className="btn-primary" onClick={submit} disabled={!allRequired}>
-          I Authorize All â Continue
+          I Authorize All → Continue
         </button>
       </div>
     </div>

@@ -33,7 +33,7 @@ export default function ExistingInsStep({ formData, onNext, onBack }) {
             className={`option-card large${has === v ? ' selected' : ''}`}
             onClick={() => choose(v)}
           >
-            <span className="card-icon">{v === 'Yes' ? 'ð' : 'â'}</span>
+            <span className="card-icon">{v === 'Yes' ? '📋' : '✅'}</span>
             <span className="card-label">{v === 'Yes' ? 'Yes, I have a policy' : 'No existing coverage'}</span>
           </div>
         ))}
@@ -58,9 +58,9 @@ export default function ExistingInsStep({ formData, onNext, onBack }) {
       )}
 
       <div className="step-actions">
-        <button className="btn-ghost" onClick={onBack}>â Back</button>
+        <button className="btn-ghost" onClick={onBack}>← Back</button>
         {has === 'Yes' && (
-          <button className="btn-primary" onClick={submit}>Continue â</button>
+          <button className="btn-primary" onClick={submit}>Continue →</button>
         )}
       </div>
     </div>

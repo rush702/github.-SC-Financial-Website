@@ -18,7 +18,7 @@ export default function PrevDeclinedStep({ formData, onNext, onBack }) {
       </p>
 
       <div className="info-box">
-        <span className="info-box-icon">â¹ï¸</span>
+        <span className="info-box-icon">ℹ️</span>
         <span>A previous decline does not automatically disqualify you from this application. Your history is reviewed holistically.</span>
       </div>
 
@@ -29,14 +29,14 @@ export default function PrevDeclinedStep({ formData, onNext, onBack }) {
             className={`option-card large${answer === v ? ' selected' : ''}`}
             onClick={() => choose(v)}
           >
-            <span className="card-icon">{v === 'Yes' ? 'ð' : 'â'}</span>
+            <span className="card-icon">{v === 'Yes' ? '📉' : '✅'}</span>
             <span className="card-label">{v}</span>
           </div>
         ))}
       </div>
 
       <div className="step-actions">
-        <button className="btn-ghost" onClick={onBack}>â Back</button>
+        <button className="btn-ghost" onClick={onBack}>← Back</button>
       </div>
     </div>
   )

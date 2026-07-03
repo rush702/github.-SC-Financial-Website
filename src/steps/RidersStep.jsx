@@ -2,12 +2,12 @@ import { useState } from 'react'
 import SectionBadge from '../components/SectionBadge'
 
 const RIDERS = [
-  { id: 'waiver',     icon: 'ð¥', label: 'Waiver of Premium',         sub: 'Premiums waived if you become totally disabled.' },
-  { id: 'add',        icon: 'ð¥', label: 'Accidental Death (AD&D)',    sub: 'Double benefit if death results from an accident.' },
-  { id: 'critical',   icon: 'â¤ï¸âð©¹', label: 'Critical Illness Rider',   sub: 'Lump-sum payout on diagnosis of major illness.' },
-  { id: 'disability', icon: 'â¿', label: 'Disability Income Rider',    sub: 'Monthly income if you can\'t work due to disability.' },
-  { id: 'child',      icon: 'ð¶', label: 'Child Term Rider',           sub: 'Affordable coverage for all your children.' },
-  { id: 'adb',        icon: 'â¡', label: 'Accelerated Death Benefit',  sub: 'Access benefits early if diagnosed terminal. Often free.' },
+  { id: 'waiver',     icon: '🏥', label: 'Waiver of Premium',         sub: 'Premiums waived if you become totally disabled.' },
+  { id: 'add',        icon: '💥', label: 'Accidental Death (AD&D)',    sub: 'Double benefit if death results from an accident.' },
+  { id: 'critical',   icon: '❤️‍🩹', label: 'Critical Illness Rider',   sub: 'Lump-sum payout on diagnosis of major illness.' },
+  { id: 'disability', icon: '♿', label: 'Disability Income Rider',    sub: 'Monthly income if you can\'t work due to disability.' },
+  { id: 'child',      icon: '👶', label: 'Child Term Rider',           sub: 'Affordable coverage for all your children.' },
+  { id: 'adb',        icon: '⚡', label: 'Accelerated Death Benefit',  sub: 'Access benefits early if diagnosed terminal. Often free.' },
 ]
 
 export default function RidersStep({ formData, onNext, onBack }) {
@@ -21,7 +21,7 @@ export default function RidersStep({ formData, onNext, onBack }) {
     <div className="step">
       <SectionBadge section="B" label="Coverage" />
       <h2 className="step-question">Add any riders?</h2>
-      <p className="step-hint">Riders enhance your base policy. Select all that apply â or skip if you just want the base coverage.</p>
+      <p className="step-hint">Riders enhance your base policy. Select all that apply — or skip if you just want the base coverage.</p>
 
       <div className="cards-grid full" style={{ gap: 10, marginBottom: 24 }}>
         {RIDERS.map(r => (
@@ -41,10 +41,10 @@ export default function RidersStep({ formData, onNext, onBack }) {
       </div>
 
       <div className="step-actions">
-        <button className="btn-ghost" onClick={onBack}>â Back</button>
+        <button className="btn-ghost" onClick={onBack}>← Back</button>
         <div className="step-actions-right">
           <button className="btn-secondary" onClick={() => onNext({ riders: [] })}>Skip</button>
-          <button className="btn-primary" onClick={() => onNext({ riders: selected })}>Continue â</button>
+          <button className="btn-primary" onClick={() => onNext({ riders: selected })}>Continue →</button>
         </div>
       </div>
     </div>

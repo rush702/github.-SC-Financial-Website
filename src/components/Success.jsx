@@ -16,7 +16,7 @@ export default function Success({ formData }) {
   return (
     <div className="app" style={{ justifyContent: 'center' }}>
       <div className="success-wrap">
-        <div className="success-icon">â</div>
+        <div className="success-icon">✅</div>
 
         <h1 className="success-title">
           You're all set,<br />{formData.firstName}!
@@ -33,28 +33,28 @@ export default function Success({ formData }) {
 
         <div className="next-steps">
           <div className="next-step">
-            <span className="next-step-icon">ð</span>
+            <span className="next-step-icon">📞</span>
             <div>
               <strong>Agent Contact</strong>
               <span>A licensed agent will call you at {formData.phone} within 24 hours to review your application.</span>
             </div>
           </div>
           <div className="next-step">
-            <span className="next-step-icon">ð</span>
+            <span className="next-step-icon">🔍</span>
             <div>
               <strong>Underwriting Review</strong>
               <span>We'll verify your information with MIB, prescription records, and motor vehicle records as authorized.</span>
             </div>
           </div>
           <div className="next-step">
-            <span className="next-step-icon">ð</span>
+            <span className="next-step-icon">📄</span>
             <div>
               <strong>Policy Issued</strong>
-              <span>Upon approval, your policy documents will be emailed to {formData.email} within 2â5 business days.</span>
+              <span>Upon approval, your policy documents will be emailed to {formData.email} within 2–5 business days.</span>
             </div>
           </div>
           <div className="next-step">
-            <span className="next-step-icon">ð¡ï¸</span>
+            <span className="next-step-icon">🛡️</span>
             <div>
               <strong>Coverage Begins</strong>
               <span>Your {formData.coverageAmount ? `$${Number(formData.coverageAmount).toLocaleString()}` : ''} policy activates upon your first premium payment.</span>

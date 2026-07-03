@@ -40,7 +40,7 @@ export default function OccupationStep({ formData, onNext, onBack }) {
         />
         {isHighRisk && occupation && (
           <div className="warning-box" style={{ marginTop: 12, marginBottom: 0 }}>
-            <span>â ï¸</span>
+            <span>⚠️</span>
             <span>Your occupation may be classified as high-risk. Additional underwriting questions may be required.</span>
           </div>
         )}
@@ -63,16 +63,16 @@ export default function OccupationStep({ formData, onNext, onBack }) {
           <span>$20,000</span>
           <span>$500,000+</span>
         </div>
-        <p className="field-hint">Coverage amounts are typically 10â15Ã your annual income.</p>
+        <p className="field-hint">Coverage amounts are typically 10–15× your annual income.</p>
       </div>
 
-      {err && <div className="field-error">â ï¸ {err}</div>}
+      {err && <div className="field-error">⚠️ {err}</div>}
 
       <div className="step-actions">
-        <button className="btn-ghost" onClick={onBack}>â Back</button>
+        <button className="btn-ghost" onClick={onBack}>← Back</button>
         <div className="step-actions-right">
           <span className="enter-hint">press <kbd>Enter</kbd></span>
-          <button className="btn-primary" onClick={submit} disabled={!occupation.trim()}>Continue â</button>
+          <button className="btn-primary" onClick={submit} disabled={!occupation.trim()}>Continue →</button>
         </div>
       </div>
     </div>

@@ -2,10 +2,10 @@ import { useState } from 'react'
 import SectionBadge from '../components/SectionBadge'
 
 function riskLevel(drinks) {
-  if (drinks === 0)   return { label: 'Non-drinker', color: '#10b981', icon: 'ð¿' }
-  if (drinks <= 7)    return { label: 'Low risk',    color: '#10b981', icon: 'â' }
-  if (drinks <= 14)   return { label: 'Moderate',    color: '#f59e0b', icon: 'â ï¸' }
-  return                     { label: 'High risk',   color: '#ef4444', icon: 'ð¨' }
+  if (drinks === 0)   return { label: 'Non-drinker', color: '#10b981', icon: '🌿' }
+  if (drinks <= 7)    return { label: 'Low risk',    color: '#10b981', icon: '✅' }
+  if (drinks <= 14)   return { label: 'Moderate',    color: '#f59e0b', icon: '⚠️' }
+  return                     { label: 'High risk',   color: '#ef4444', icon: '🚨' }
 }
 
 export default function AlcoholStep({ formData, onNext, onBack }) {
@@ -41,14 +41,14 @@ export default function AlcoholStep({ formData, onNext, onBack }) {
         marginBottom: 28, fontSize: '0.9rem' }}>
         <span style={{ fontSize: '1.3rem' }}>{risk.icon}</span>
         <span style={{ color: risk.color, fontWeight: 600 }}>{risk.label}</span>
-        {drinks > 14 && <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>â may affect premium rates</span>}
+        {drinks > 14 && <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>— may affect premium rates</span>}
       </div>
 
       <div className="step-actions">
-        <button className="btn-ghost" onClick={onBack}>â Back</button>
+        <button className="btn-ghost" onClick={onBack}>← Back</button>
         <div className="step-actions-right">
           <span className="enter-hint">press <kbd>Enter</kbd></span>
-          <button className="btn-primary" onClick={() => onNext({ drinksPerWeek: drinks })}>Continue â</button>
+          <button className="btn-primary" onClick={() => onNext({ drinksPerWeek: drinks })}>Continue →</button>
         </div>
       </div>
     </div>

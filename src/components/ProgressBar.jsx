@@ -5,13 +5,13 @@ const SECTION_COLORS = {
 }
 
 const SECTION_ICONS = {
-  A: 'ð¤', B: 'ð¡ï¸', C: 'â¤ï¸', D: 'â¡',
-  E: 'ð', F: 'ð¨âð©âð§', G: 'âï¸', R: 'ð',
+  A: '👤', B: '🛡️', C: '❤️', D: '⚡',
+  E: '📋', F: '👨‍👩‍👧', G: '✍️', R: '📝',
 }
 
 export default function ProgressBar({ progress, section, sectionName, current, total }) {
   const color = SECTION_COLORS[section] || '#6366f1'
-  const icon  = SECTION_ICONS[section]  || 'â'
+  const icon  = SECTION_ICONS[section]  || '●'
   const pct   = Math.min(100, Math.max(0, Math.round(progress)))
 
   return (

@@ -29,8 +29,8 @@ export default function HeightWeightStep({ formData, onNext, onBack }) {
   const submit = () => {
     if (!ft || !wt) { setErr('Please enter your height and weight.'); return }
     const f = parseInt(ft), i = parseInt(inch||0), w = parseInt(wt)
-    if (f < 4 || f > 7) { setErr('Enter a valid height (4â7 ft).'); return }
-    if (w < 50 || w > 500) { setErr('Enter a valid weight (50â500 lbs).'); return }
+    if (f < 4 || f > 7) { setErr('Enter a valid height (4–7 ft).'); return }
+    if (w < 50 || w > 500) { setErr('Enter a valid weight (50–500 lbs).'); return }
     onNext({ heightFt: ft, heightIn: inch || '0', weight: wt })
   }
 
@@ -67,18 +67,18 @@ export default function HeightWeightStep({ formData, onNext, onBack }) {
         <div style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 18px',
           background: `${b.color}15`, border: `1px solid ${b.color}40`, borderRadius: 10,
           marginBottom: 20, fontSize: '0.875rem' }}>
-          <span style={{ fontSize: '1.2rem' }}>ð</span>
-          <span>BMI: <strong style={{ color: b.color }}>{bmi()} â {b.label}</strong></span>
+          <span style={{ fontSize: '1.2rem' }}>📊</span>
+          <span>BMI: <strong style={{ color: b.color }}>{bmi()} — {b.label}</strong></span>
         </div>
       )}
 
-      {err && <div className="field-error">â ï¸ {err}</div>}
+      {err && <div className="field-error">⚠️ {err}</div>}
 
       <div className="step-actions">
-        <button className="btn-ghost" onClick={onBack}>â Back</button>
+        <button className="btn-ghost" onClick={onBack}>← Back</button>
         <div className="step-actions-right">
           <span className="enter-hint">press <kbd>Enter</kbd></span>
-          <button className="btn-primary" onClick={submit} disabled={!ft || !wt}>Continue â</button>
+          <button className="btn-primary" onClick={submit} disabled={!ft || !wt}>Continue →</button>
         </div>
       </div>
     </div>

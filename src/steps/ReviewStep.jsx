@@ -25,7 +25,7 @@ function Section({ section, title, children, onEdit, stepId }) {
           <span style={{ background: color }} />
           {title}
         </div>
-        <button className="review-edit" onClick={() => onEdit(stepId)}>Edit âï¸</button>
+        <button className="review-edit" onClick={() => onEdit(stepId)}>Edit ✏️</button>
       </div>
       {children}
     </div>
@@ -36,7 +36,7 @@ export default function ReviewStep({ formData, onNext, onBack, jumpTo }) {
   const [submitting, setSubmitting] = useState(false)
 
   const d = formData
-  const fmtAmt = (v) => v ? `$${Number(v).toLocaleString()}` : 'â'
+  const fmtAmt = (v) => v ? `$${Number(v).toLocaleString()}` : '—'
 
   const handleSubmit = () => {
     setSubmitting(true)
@@ -81,11 +81,11 @@ export default function ReviewStep({ formData, onNext, onBack, jumpTo }) {
         <Section section="C" title="Health" onEdit={jumpTo} stepId="heightWeight">
           <Row label="Height"         value={d.heightFt ? `${d.heightFt}'${d.heightIn || 0}"` : null} />
           <Row label="Weight"         value={d.weight ? `${d.weight} lbs` : null} />
-          <Row label="Tobacco Use"    value={d.tobacco === 'Yes' ? `Yes â ${d.tobaccoType || ''} (${d.tobaccoFreq || ''})` : d.tobacco} />
+          <Row label="Tobacco Use"    value={d.tobacco === 'Yes' ? `Yes — ${d.tobaccoType || ''} (${d.tobaccoFreq || ''})` : d.tobacco} />
           <Row label="Alcohol"        value={d.drinksPerWeek === 0 ? 'None' : `${d.drinksPerWeek} drinks/week`} />
-          <Row label="Medications"    value={d.medications === 'Yes' ? `Yes â ${d.medicationsList?.slice(0,60)}${d.medicationsList?.length > 60 ? 'â¦' : ''}` : d.medications} />
+          <Row label="Medications"    value={d.medications === 'Yes' ? `Yes — ${d.medicationsList?.slice(0,60)}${d.medicationsList?.length > 60 ? '…' : ''}` : d.medications} />
           <Row label="Conditions"     value={conditions} />
-          <Row label="Hospitalizations" value={d.hospitalized === 'Yes' ? `Yes â ${d.hospitalDetails?.slice(0,60)}â¦` : d.hospitalized} />
+          <Row label="Hospitalizations" value={d.hospitalized === 'Yes' ? `Yes — ${d.hospitalDetails?.slice(0,60)}…` : d.hospitalized} />
           <Row label="Family History" value={familyHist} />
         </Section>
 
@@ -96,40 +96,40 @@ export default function ReviewStep({ formData, onNext, onBack, jumpTo }) {
         </Section>
 
         <Section section="E" title="Existing Coverage" onEdit={jumpTo} stepId="existingIns">
-          <Row label="Existing Life Insurance" value={d.hasExistingIns === 'Yes' ? `Yes â ${d.existingCompany || ''} ${fmtAmt(d.existingAmount)}` : d.hasExistingIns} />
+          <Row label="Existing Life Insurance" value={d.hasExistingIns === 'Yes' ? `Yes — ${d.existingCompany || ''} ${fmtAmt(d.existingAmount)}` : d.hasExistingIns} />
           <Row label="Previously Declined"     value={d.prevDeclined} />
         </Section>
 
         <Section section="F" title="Beneficiaries" onEdit={jumpTo} stepId="beneficiary">
-          <Row label="Primary"    value={d.beneName ? `${d.beneName} (${d.beneRelation}) â ${d.benePercent}%` : null} />
-          <Row label="Contingent" value={d.contingentName ? `${d.contingentName} (${d.contingentRelation}) â ${d.contingentPercent || ''}%` : 'None'} />
+          <Row label="Primary"    value={d.beneName ? `${d.beneName} (${d.beneRelation}) — ${d.benePercent}%` : null} />
+          <Row label="Contingent" value={d.contingentName ? `${d.contingentName} (${d.contingentRelation}) — ${d.contingentPercent || ''}%` : 'None'} />
         </Section>
 
         <Section section="G" title="Authorization & Signature" onEdit={jumpTo} stepId="authorization">
-          <Row label="MIB Authorization"          value="â Authorized" />
-          <Row label="IntelliScript (Rx)"          value="â Authorized" />
-          <Row label="DMV / MVR"                   value="â Authorized" />
-          <Row label="HIPAA Medical Records"       value="â Authorized" />
+          <Row label="MIB Authorization"          value="✓ Authorized" />
+          <Row label="IntelliScript (Rx)"          value="✓ Authorized" />
+          <Row label="DMV / MVR"                   value="✓ Authorized" />
+          <Row label="HIPAA Medical Records"       value="✓ Authorized" />
           <Row label="Electronic Signature"        value={d.esignName || null} />
         </Section>
       </div>
 
       <div style={{ marginBottom: 16 }}>
         <div className="info-box">
-          <span className="info-box-icon">ð</span>
+          <span className="info-box-icon">🔒</span>
           <span>By submitting, you confirm all information is accurate. False statements may void your policy. Your application will be reviewed by a licensed SC Financial Life Group agent.</span>
         </div>
       </div>
 
       <div className="step-actions">
-        <button className="btn-ghost" onClick={onBack}>â Back</button>
+        <button className="btn-ghost" onClick={onBack}>← Back</button>
         <button
           className="btn-primary wide"
           onClick={handleSubmit}
           disabled={submitting}
           style={{ maxWidth: 320 }}
         >
-          {submitting ? 'â³ Submittingâ¦' : 'ð Submit Application'}
+          {submitting ? '⏳ Submitting…' : '🚀 Submit Application'}
         </button>
       </div>
     </div>

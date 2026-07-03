@@ -36,7 +36,7 @@ export default function BeneficiaryStep({ formData, onNext, onBack }) {
         <div className="field-group">
           <label className="field-label">Relationship <span className="req">*</span></label>
           <select className="input" value={relation} onChange={e => { setRelation(e.target.value); setErr('') }}>
-            <option value="">Selectâ¦</option>
+            <option value="">Select…</option>
             {RELATIONS.map(r => <option key={r} value={r}>{r}</option>)}
           </select>
         </div>
@@ -56,13 +56,13 @@ export default function BeneficiaryStep({ formData, onNext, onBack }) {
         <p className="field-hint">Total across all beneficiaries must equal 100%.</p>
       </div>
 
-      {err && <div className="field-error">â ï¸ {err}</div>}
+      {err && <div className="field-error">⚠️ {err}</div>}
 
       <div className="step-actions">
-        <button className="btn-ghost" onClick={onBack}>â Back</button>
+        <button className="btn-ghost" onClick={onBack}>← Back</button>
         <div className="step-actions-right">
           <span className="enter-hint">press <kbd>Enter</kbd></span>
-          <button className="btn-primary" onClick={submit} disabled={!name.trim() || !relation}>Continue â</button>
+          <button className="btn-primary" onClick={submit} disabled={!name.trim() || !relation}>Continue →</button>
         </div>
       </div>
     </div>

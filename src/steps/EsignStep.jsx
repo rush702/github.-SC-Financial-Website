@@ -41,7 +41,7 @@ export default function EsignStep({ formData, onNext, onBack }) {
         {sigName && (
           <p style={{ fontSize: '0.78rem', marginTop: 8,
             color: nameMatch ? 'var(--success)' : 'var(--danger)' }}>
-            {nameMatch ? 'â Name matches application' : 'â Name must match: ' + `${formData.firstName} ${formData.lastName}`}
+            {nameMatch ? '✓ Name matches application' : '✗ Name must match: ' + `${formData.firstName} ${formData.lastName}`}
           </p>
         )}
       </div>
@@ -51,7 +51,7 @@ export default function EsignStep({ formData, onNext, onBack }) {
         onClick={() => { setConfirmed(c => !c); setErr('') }}
       >
         <div className={`esign-check${confirmed ? ' checked' : ''}`}>
-          {confirmed ? 'â' : ''}
+          {confirmed ? '✓' : ''}
         </div>
         <p className="esign-confirm-text">
           <strong>I understand and agree</strong> that this is my legally binding electronic signature.
@@ -61,15 +61,15 @@ export default function EsignStep({ formData, onNext, onBack }) {
       </div>
 
       <div className="esign-timestamp">
-        ð Signed on: {now}
+        🕐 Signed on: {now}
       </div>
 
-      {err && <div className="field-error" style={{ marginTop: 16 }}>â ï¸ {err}</div>}
+      {err && <div className="field-error" style={{ marginTop: 16 }}>⚠️ {err}</div>}
 
       <div className="step-actions">
-        <button className="btn-ghost" onClick={onBack}>â Back</button>
+        <button className="btn-ghost" onClick={onBack}>← Back</button>
         <button className="btn-primary" onClick={submit} disabled={!sigName.trim() || !confirmed}>
-          Sign &amp; Continue â
+          Sign &amp; Continue →
         </button>
       </div>
     </div>

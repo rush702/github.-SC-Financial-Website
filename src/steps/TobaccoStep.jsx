@@ -25,7 +25,7 @@ export default function TobaccoStep({ formData, onNext, onBack }) {
     <div className="step">
       <SectionBadge section="C" label="Your Health" />
       <h2 className="step-question">Do you use tobacco or nicotine?</h2>
-      <p className="step-hint">Includes cigarettes, cigars, vaping, chewing tobacco, or any nicotine products in the last 5 years. Honest answers matter â misrepresentation can void your policy.</p>
+      <p className="step-hint">Includes cigarettes, cigars, vaping, chewing tobacco, or any nicotine products in the last 5 years. Honest answers matter — misrepresentation can void your policy.</p>
 
       <div className="cards-grid two" style={{ marginBottom: 24 }}>
         {['Yes', 'No'].map(v => (
@@ -34,7 +34,7 @@ export default function TobaccoStep({ formData, onNext, onBack }) {
             className={`option-card large${use === v ? ' selected' : ''}`}
             onClick={() => choose(v)}
           >
-            <span className="card-icon">{v === 'Yes' ? 'ð¬' : 'â'}</span>
+            <span className="card-icon">{v === 'Yes' ? '🚬' : '✅'}</span>
             <span className="card-label">{v}</span>
           </div>
         ))}
@@ -71,9 +71,9 @@ export default function TobaccoStep({ formData, onNext, onBack }) {
       )}
 
       <div className="step-actions">
-        <button className="btn-ghost" onClick={onBack}>â Back</button>
+        <button className="btn-ghost" onClick={onBack}>← Back</button>
         {use && use !== 'No' && (
-          <button className="btn-primary" onClick={submit}>Continue â</button>
+          <button className="btn-primary" onClick={submit}>Continue →</button>
         )}
       </div>
     </div>

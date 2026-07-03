@@ -86,8 +86,14 @@ function getActiveSteps(formData) {
   return ALL_STEPS.filter(s => !s.skip || !s.skip(formData))
 }
 
+function wantsDirectApply() {
+  if (typeof window === 'undefined') return false
+  const params = new URLSearchParams(window.location.search)
+  return params.has('apply') || window.location.hash === '#apply'
+}
+
 export default function App() {
-  const [showLanding, setShowLanding] = useState(true)
+  const [showLanding, setShowLanding] = useState(() => !wantsDirectApply())
   const [stepIdx, setStepIdx]         = useState(0)
   const [animKey, setAnimKey]         = useState(0)
   const [direction, setDirection]     = useState('forward')
