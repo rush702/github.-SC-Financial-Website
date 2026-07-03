@@ -21,7 +21,7 @@ export default function TermLengthStep({ formData, onNext, onBack }) {
     <div className="step">
       <SectionBadge section="B" label="Coverage" />
       <h2 className="step-question">How long do you need coverage?</h2>
-      <p className="step-hint">Choose a term that covers your biggest financial obligations â mortgage, kids' college, or until retirement.</p>
+      <p className="step-hint">Choose a term that covers your biggest financial obligations — mortgage, kids' college, or until retirement.</p>
 
       <div className="cards-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(120px,1fr))', marginBottom: 28 }}>
         {TERMS.map(t => (
@@ -37,9 +37,9 @@ export default function TermLengthStep({ formData, onNext, onBack }) {
       </div>
 
       <div className="step-actions">
-        <button className="btn-ghost" onClick={onBack}>â Back</button>
+        <button className="btn-ghost" onClick={onBack}>← Back</button>
         <button className="btn-primary" onClick={() => onNext({ termLength: selected })} disabled={!selected}>
-          Continue â
+          Continue →
         </button>
       </div>
     </div>

@@ -3,10 +3,10 @@ import SectionBadge from '../components/SectionBadge'
 
 const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December']
 const GENDERS = [
-  { value: 'Male',            icon: 'âï¸', sub: '' },
-  { value: 'Female',          icon: 'âï¸', sub: '' },
-  { value: 'Non-binary',      icon: 'â§ï¸', sub: '' },
-  { value: 'Prefer not to say', icon: 'ð¤', sub: '' },
+  { value: 'Male',            icon: '♂️', sub: '' },
+  { value: 'Female',          icon: '♀️', sub: '' },
+  { value: 'Non-binary',      icon: '⚧️', sub: '' },
+  { value: 'Prefer not to say', icon: '🤐', sub: '' },
 ]
 
 function getYears() {
@@ -51,7 +51,7 @@ export default function BirthGenderStep({ formData, onNext, onBack }) {
     <div className="step">
       <SectionBadge section="A" label="About You" />
       <h2 className="step-question">When were you born?</h2>
-      <p className="step-hint">We need this to calculate your premium. You must be 18â85 years old to apply.</p>
+      <p className="step-hint">We need this to calculate your premium. You must be 18–85 years old to apply.</p>
 
       <div className="field-row three" style={{ marginBottom: 32 }}>
         <div className="field-group">
@@ -95,11 +95,11 @@ export default function BirthGenderStep({ formData, onNext, onBack }) {
         ))}
       </div>
 
-      {err && <div className="field-error">â ï¸ {err}</div>}
+      {err && <div className="field-error">⚠️ {err}</div>}
 
       <div className="step-actions">
-        <button className="btn-ghost" onClick={onBack}>â Back</button>
-        <button className="btn-primary" onClick={submit} disabled={!month || !day || !year || !gender}>Continue â</button>
+        <button className="btn-ghost" onClick={onBack}>← Back</button>
+        <button className="btn-primary" onClick={submit} disabled={!month || !day || !year || !gender}>Continue →</button>
       </div>
     </div>
   )

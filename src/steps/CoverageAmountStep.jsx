@@ -17,7 +17,7 @@ export default function CoverageAmountStep({ formData, onNext, onBack }) {
     <div className="step">
       <SectionBadge section="B" label="Coverage" />
       <h2 className="step-question">How much coverage do you need?</h2>
-      <p className="step-hint">A common rule of thumb: 10â15Ã your annual income. Think about replacing income, paying off debts, and funding education.</p>
+      <p className="step-hint">A common rule of thumb: 10–15× your annual income. Think about replacing income, paying off debts, and funding education.</p>
 
       <div className="slider-wrap">
         <div className="slider-value">
@@ -49,15 +49,15 @@ export default function CoverageAmountStep({ formData, onNext, onBack }) {
       </div>
 
       <div className="info-box">
-        <span className="info-box-icon">ð¡</span>
-        <span>Based on your income of <strong>${Number(formData.income).toLocaleString()}/yr</strong>, a recommended coverage range is <strong>${(formData.income*10).toLocaleString()} â ${(formData.income*15).toLocaleString()}</strong>.</span>
+        <span className="info-box-icon">💡</span>
+        <span>Based on your income of <strong>${Number(formData.income).toLocaleString()}/yr</strong>, a recommended coverage range is <strong>${(formData.income*10).toLocaleString()} – ${(formData.income*15).toLocaleString()}</strong>.</span>
       </div>
 
       <div className="step-actions">
-        <button className="btn-ghost" onClick={onBack}>â Back</button>
+        <button className="btn-ghost" onClick={onBack}>← Back</button>
         <div className="step-actions-right">
           <span className="enter-hint">press <kbd>Enter</kbd></span>
-          <button className="btn-primary" onClick={submit}>Continue â</button>
+          <button className="btn-primary" onClick={submit}>Continue →</button>
         </div>
       </div>
     </div>

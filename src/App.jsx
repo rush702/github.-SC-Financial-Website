@@ -86,8 +86,17 @@ function getActiveSteps(formData) {
   return ALL_STEPS.filter(s => !s.skip || !s.skip(formData))
 }
 
+const isStandalone = import.meta.env.MODE === 'standalone'
+
+function wantsDirectApply() {
+  if (isStandalone) return true
+  if (typeof window === 'undefined') return false
+  const params = new URLSearchParams(window.location.search)
+  return params.has('apply') || window.location.hash === '#apply'
+}
+
 export default function App() {
-  const [showLanding, setShowLanding] = useState(true)
+  const [showLanding, setShowLanding] = useState(() => !wantsDirectApply())
   const [stepIdx, setStepIdx]         = useState(0)
   const [animKey, setAnimKey]         = useState(0)
   const [direction, setDirection]     = useState('forward')
@@ -118,7 +127,7 @@ export default function App() {
   }, [formData, stepIdx])
 
   const goBack = useCallback(() => {
-    if (stepIdx === 0) { setShowLanding(true); return }
+    if (stepIdx === 0) { if (!isStandalone) setShowLanding(true); return }
     setDirection('backward')
     setAnimKey(k => k + 1)
     setStepIdx(i => i - 1)

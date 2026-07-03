@@ -27,7 +27,7 @@ export default function HospitalStep({ formData, onNext, onBack }) {
             className={`option-card large${hosp === v ? ' selected' : ''}`}
             onClick={() => choose(v)}
           >
-            <span className="card-icon">{v === 'Yes' ? 'ð¥' : 'â'}</span>
+            <span className="card-icon">{v === 'Yes' ? '🏥' : '✅'}</span>
             <span className="card-label">{v}</span>
           </div>
         ))}
@@ -37,12 +37,12 @@ export default function HospitalStep({ formData, onNext, onBack }) {
         <div className="reveal-panel">
           <label className="field-label">Please describe each hospitalization</label>
           <p className="field-hint" style={{ marginBottom: 10 }}>
-            Include approximate date, reason/diagnosis, and treatment received (e.g., "March 2023 â Appendectomy, 2-day stay").
+            Include approximate date, reason/diagnosis, and treatment received (e.g., "March 2023 – Appendectomy, 2-day stay").
           </p>
           <textarea
             className="input"
             rows={4}
-            placeholder={"March 2023 â Appendectomy, 2-day stay\nJuly 2022 â Chest pain evaluation, discharged same day\n..."}
+            placeholder={"March 2023 – Appendectomy, 2-day stay\nJuly 2022 – Chest pain evaluation, discharged same day\n..."}
             value={details}
             onChange={e => setDetails(e.target.value)}
             style={{ resize: 'vertical' }}
@@ -51,9 +51,9 @@ export default function HospitalStep({ formData, onNext, onBack }) {
       )}
 
       <div className="step-actions">
-        <button className="btn-ghost" onClick={onBack}>â Back</button>
+        <button className="btn-ghost" onClick={onBack}>← Back</button>
         {hosp === 'Yes' && (
-          <button className="btn-primary" onClick={submit}>Continue â</button>
+          <button className="btn-primary" onClick={submit}>Continue →</button>
         )}
       </div>
     </div>

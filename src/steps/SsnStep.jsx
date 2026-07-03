@@ -30,17 +30,17 @@ export default function SsnStep({ formData, onNext, onBack }) {
     <div className="step">
       <SectionBadge section="A" label="About You" />
       <h2 className="step-question">Social Security &amp; Citizenship</h2>
-      <p className="step-hint">Your SSN is required to verify your identity with the MIB, credit bureaus, and prescription databases â standard for all life insurance applications.</p>
+      <p className="step-hint">Your SSN is required to verify your identity with the MIB, credit bureaus, and prescription databases — standard for all life insurance applications.</p>
 
       <div className="info-box">
-        <span className="info-box-icon">ð</span>
+        <span className="info-box-icon">🔒</span>
         <span>Your SSN is encrypted with AES-256 and never stored in plain text. It is used solely for underwriting verification.</span>
       </div>
 
       <div className="field-group">
         <label className="field-label">Social Security Number <span className="req">*</span></label>
         <div className="input-with-icon">
-          <span className="input-icon">ð</span>
+          <span className="input-icon">🔐</span>
           <input
             ref={ref}
             className={`input masked`}
@@ -76,11 +76,11 @@ export default function SsnStep({ formData, onNext, onBack }) {
         </div>
       </div>
 
-      {err && <div className="field-error" style={{ marginTop: 16 }}>â ï¸ {err}</div>}
+      {err && <div className="field-error" style={{ marginTop: 16 }}>⚠️ {err}</div>}
 
       <div className="step-actions">
-        <button className="btn-ghost" onClick={onBack}>â Back</button>
-        <button className="btn-primary" onClick={submit}>Continue â</button>
+        <button className="btn-ghost" onClick={onBack}>← Back</button>
+        <button className="btn-primary" onClick={submit}>Continue →</button>
       </div>
     </div>
   )

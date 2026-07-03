@@ -72,7 +72,7 @@ export default function ContactStep({ formData, onNext, onBack }) {
       <div className="field-group">
         <label className="field-label">State <span className="req">*</span></label>
         <select className="input" value={state} onChange={e => { setState(e.target.value); setErr('') }}>
-          <option value="">Select stateâ¦</option>
+          <option value="">Select state…</option>
           {US_STATES.map(s => <option key={s} value={s}>{s}</option>)}
         </select>
       </div>
@@ -81,7 +81,7 @@ export default function ContactStep({ formData, onNext, onBack }) {
         <div className="field-group">
           <label className="field-label">Phone Number <span className="req">*</span></label>
           <div className="input-with-icon">
-            <span className="input-icon">ð±</span>
+            <span className="input-icon">📱</span>
             <input className="input" placeholder="(555) 000-0000" value={phone}
               onChange={e => { setPhone(formatPhone(e.target.value)); setErr('') }} />
           </div>
@@ -89,18 +89,18 @@ export default function ContactStep({ formData, onNext, onBack }) {
         <div className="field-group">
           <label className="field-label">Email Address <span className="req">*</span></label>
           <div className="input-with-icon">
-            <span className="input-icon">âï¸</span>
+            <span className="input-icon">✉️</span>
             <input className="input" type="email" placeholder="jane@example.com" value={email}
               onChange={e => { setEmail(e.target.value); setErr('') }} />
           </div>
         </div>
       </div>
 
-      {err && <div className="field-error">â ï¸ {err}</div>}
+      {err && <div className="field-error">⚠️ {err}</div>}
 
       <div className="step-actions">
-        <button className="btn-ghost" onClick={onBack}>â Back</button>
-        <button className="btn-primary" onClick={submit}>Continue â</button>
+        <button className="btn-ghost" onClick={onBack}>← Back</button>
+        <button className="btn-primary" onClick={submit}>Continue →</button>
       </div>
     </div>
   )

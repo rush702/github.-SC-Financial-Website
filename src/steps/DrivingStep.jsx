@@ -2,11 +2,11 @@ import { useState } from 'react'
 import SectionBadge from '../components/SectionBadge'
 
 const FLAGS = [
-  { id: 'dui',        icon: 'ðº', label: 'DUI / DWI Conviction',          sub: 'Within the last 5 years' },
-  { id: 'suspended',  icon: 'ð«', label: 'License Suspended or Revoked',  sub: 'Within the last 3 years' },
-  { id: 'accidents',  icon: 'ð¥', label: '2+ At-Fault Accidents',          sub: 'Within the last 3 years' },
-  { id: 'reckless',   icon: 'â¡', label: 'Reckless Driving Conviction',    sub: 'Within the last 5 years' },
-  { id: 'speeding',   icon: 'ð¨', label: '3+ Speeding Violations',         sub: 'Within the last 3 years' },
+  { id: 'dui',        icon: '🍺', label: 'DUI / DWI Conviction',          sub: 'Within the last 5 years' },
+  { id: 'suspended',  icon: '🚫', label: 'License Suspended or Revoked',  sub: 'Within the last 3 years' },
+  { id: 'accidents',  icon: '💥', label: '2+ At-Fault Accidents',          sub: 'Within the last 3 years' },
+  { id: 'reckless',   icon: '⚡', label: 'Reckless Driving Conviction',    sub: 'Within the last 5 years' },
+  { id: 'speeding',   icon: '🚨', label: '3+ Speeding Violations',         sub: 'Within the last 3 years' },
 ]
 
 export default function DrivingStep({ formData, onNext, onBack }) {
@@ -51,18 +51,18 @@ export default function DrivingStep({ formData, onNext, onBack }) {
           className={`chip none-chip${noneFlag ? ' selected' : ''}`}
           onClick={selectNone}
         >
-          â Clean Driving Record
+          ✓ Clean Driving Record
         </button>
       </div>
 
       <div className="step-actions">
-        <button className="btn-ghost" onClick={onBack}>â Back</button>
+        <button className="btn-ghost" onClick={onBack}>← Back</button>
         <button
           className="btn-primary"
           onClick={() => onNext({ drivingFlags: selected })}
           disabled={selected.length === 0 && !noneFlag}
         >
-          Continue â
+          Continue →
         </button>
       </div>
     </div>

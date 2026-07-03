@@ -29,7 +29,7 @@ export default function MedicationsStep({ formData, onNext, onBack }) {
             className={`option-card large${hasMeds === v ? ' selected' : ''}`}
             onClick={() => choose(v)}
           >
-            <span className="card-icon">{v === 'Yes' ? 'ð' : 'â'}</span>
+            <span className="card-icon">{v === 'Yes' ? '💊' : '✅'}</span>
             <span className="card-label">{v}</span>
           </div>
         ))}
@@ -39,12 +39,12 @@ export default function MedicationsStep({ formData, onNext, onBack }) {
         <div className="reveal-panel">
           <label className="field-label">List your current medications</label>
           <p className="field-hint" style={{ marginBottom: 10 }}>
-            Include medication name, dosage, and what it's prescribed for (e.g., "Metformin 500mg â Type 2 Diabetes").
+            Include medication name, dosage, and what it's prescribed for (e.g., "Metformin 500mg – Type 2 Diabetes").
           </p>
           <textarea
             className="input"
             rows={5}
-            placeholder={"Metformin 500mg â Type 2 Diabetes\nLisinopril 10mg â High blood pressure\n..."}
+            placeholder={"Metformin 500mg – Type 2 Diabetes\nLisinopril 10mg – High blood pressure\n..."}
             value={list}
             onChange={e => setList(e.target.value)}
             style={{ resize: 'vertical' }}
@@ -53,9 +53,9 @@ export default function MedicationsStep({ formData, onNext, onBack }) {
       )}
 
       <div className="step-actions">
-        <button className="btn-ghost" onClick={onBack}>â Back</button>
+        <button className="btn-ghost" onClick={onBack}>← Back</button>
         {hasMeds === 'Yes' && (
-          <button className="btn-primary" onClick={submit}>Continue â</button>
+          <button className="btn-primary" onClick={submit}>Continue →</button>
         )}
       </div>
     </div>

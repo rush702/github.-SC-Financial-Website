@@ -29,7 +29,7 @@ export default function ContingentStep({ formData, onNext, onBack }) {
 
       {skip ? (
         <div className="info-box">
-          <span className="info-box-icon">ð¡</span>
+          <span className="info-box-icon">💡</span>
           <span>Adding a contingent beneficiary is strongly recommended to ensure your benefit always reaches the right person.</span>
         </div>
       ) : (
@@ -45,7 +45,7 @@ export default function ContingentStep({ formData, onNext, onBack }) {
             <div className="field-group">
               <label className="field-label">Relationship <span className="req">*</span></label>
               <select className="input" value={relation} onChange={e => setRelation(e.target.value)}>
-                <option value="">Selectâ¦</option>
+                <option value="">Select…</option>
                 {RELATIONS.map(r => <option key={r} value={r}>{r}</option>)}
               </select>
             </div>
@@ -66,18 +66,18 @@ export default function ContingentStep({ formData, onNext, onBack }) {
         </>
       )}
 
-      {/* single action bar â always rendered once */}
+      {/* single action bar — always rendered once */}
       <div className="step-actions">
-        <button className="btn-ghost" onClick={onBack}>â Back</button>
+        <button className="btn-ghost" onClick={onBack}>← Back</button>
         {skip ? (
           <>
             <button className="btn-secondary" onClick={() => setSkip(false)}>Add Beneficiary</button>
-            <button className="btn-primary" onClick={skipStep}>Skip â</button>
+            <button className="btn-primary" onClick={skipStep}>Skip →</button>
           </>
         ) : (
           <>
             <button className="btn-secondary" onClick={skipStep}>Skip</button>
-            <button className="btn-primary" onClick={submit} disabled={!name.trim() || !relation}>Continue â</button>
+            <button className="btn-primary" onClick={submit} disabled={!name.trim() || !relation}>Continue →</button>
           </>
         )}
       </div>

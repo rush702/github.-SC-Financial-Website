@@ -2,11 +2,11 @@ import { useState } from 'react'
 import SectionBadge from '../components/SectionBadge'
 
 const CONDITIONS = [
-  { id: 'heart',    icon: 'â¤ï¸',  label: 'Heart Disease',  sub: 'Parent or sibling diagnosed before age 60' },
-  { id: 'cancer',   icon: 'ðï¸', label: 'Cancer',          sub: 'Parent or sibling diagnosed before age 60' },
-  { id: 'diabetes', icon: 'ð©¸',  label: 'Diabetes',        sub: 'Type 1 or Type 2 in parent or sibling' },
-  { id: 'stroke',   icon: 'ð§ ',  label: 'Stroke',          sub: 'Parent or sibling before age 65' },
-  { id: 'kidney',   icon: 'ð«',  label: 'Kidney Disease',  sub: 'Requiring dialysis or transplant' },
+  { id: 'heart',    icon: '❤️',  label: 'Heart Disease',  sub: 'Parent or sibling diagnosed before age 60' },
+  { id: 'cancer',   icon: '🎗️', label: 'Cancer',          sub: 'Parent or sibling diagnosed before age 60' },
+  { id: 'diabetes', icon: '🩸',  label: 'Diabetes',        sub: 'Type 1 or Type 2 in parent or sibling' },
+  { id: 'stroke',   icon: '🧠',  label: 'Stroke',          sub: 'Parent or sibling before age 65' },
+  { id: 'kidney',   icon: '🫘',  label: 'Kidney Disease',  sub: 'Requiring dialysis or transplant' },
 ]
 
 export default function FamilyHistoryStep({ formData, onNext, onBack }) {
@@ -53,18 +53,18 @@ export default function FamilyHistoryStep({ formData, onNext, onBack }) {
           className={`chip none-chip${noneFlag ? ' selected' : ''}`}
           onClick={selectNone}
         >
-          â No significant family history
+          ✓ No significant family history
         </button>
       </div>
 
       <div className="step-actions">
-        <button className="btn-ghost" onClick={onBack}>â Back</button>
+        <button className="btn-ghost" onClick={onBack}>← Back</button>
         <button
           className="btn-primary"
           onClick={submit}
           disabled={selected.length === 0 && !noneFlag}
         >
-          Continue â
+          Continue →
         </button>
       </div>
     </div>

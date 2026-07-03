@@ -4,19 +4,19 @@ import SectionBadge from '../components/SectionBadge'
 const TYPES = [
   {
     value: 'Term',
-    icon: 'â±ï¸',
+    icon: '⏱️',
     label: 'Term Life',
-    sub: 'Coverage for a set period (10â30 yrs). Most affordable option.',
+    sub: 'Coverage for a set period (10–30 yrs). Most affordable option.',
   },
   {
     value: 'Whole',
-    icon: 'â¾ï¸',
+    icon: '♾️',
     label: 'Whole Life',
     sub: 'Lifelong coverage with a cash value component that grows over time.',
   },
   {
     value: 'Universal',
-    icon: 'ð',
+    icon: '🔄',
     label: 'Universal Life',
     sub: 'Flexible premiums and adjustable death benefit with investment options.',
   },
@@ -53,9 +53,9 @@ export default function PolicyTypeStep({ formData, onNext, onBack }) {
       </div>
 
       <div className="step-actions">
-        <button className="btn-ghost" onClick={onBack}>â Back</button>
+        <button className="btn-ghost" onClick={onBack}>← Back</button>
         <button className="btn-primary" onClick={() => onNext({ policyType: selected })} disabled={!selected}>
-          Continue â
+          Continue →
         </button>
       </div>
     </div>

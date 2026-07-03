@@ -46,13 +46,13 @@ export default function NameStep({ formData, onNext, onBack }) {
         </div>
       </div>
 
-      {err && <div className="field-error">â ï¸ {err}</div>}
+      {err && <div className="field-error">⚠️ {err}</div>}
 
       <div className="step-actions">
-        <button className="btn-ghost" onClick={onBack}>â Back</button>
+        <button className="btn-ghost" onClick={onBack}>← Back</button>
         <div className="step-actions-right">
           <span className="enter-hint">press <kbd>Enter</kbd></span>
-          <button className="btn-primary" onClick={submit}>Continue â</button>
+          <button className="btn-primary" onClick={submit}>Continue →</button>
         </div>
       </div>
     </div>

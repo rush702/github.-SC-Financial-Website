@@ -2,7 +2,7 @@ export default function Welcome({ onNext }) {
   return (
     <div className="welcome">
       <div className="welcome-brand">
-        <div className="brand-mark">ð¡ï¸</div>
+        <div className="brand-mark">🛡️</div>
         <div className="brand-name">
           SC Financial Life Group
           <span>Licensed Insurance Brokerage</span>
@@ -16,12 +16,12 @@ export default function Welcome({ onNext }) {
 
       <p className="welcome-sub">
         Answer a few questions and we'll find the right life insurance coverage for you.
-        Takes about 10 minutes â fully secure and digital.
+        Takes about 10 minutes — fully secure and digital.
       </p>
 
       <div className="welcome-stats">
         <div className="stat">
-          <span className="stat-num">$50Kâ$3M</span>
+          <span className="stat-num">$50K–$3M</span>
           <span className="stat-label">Coverage options</span>
         </div>
         <div className="stat">
@@ -35,11 +35,11 @@ export default function Welcome({ onNext }) {
       </div>
 
       <button className="btn-primary xl" onClick={() => onNext()}>
-        Start My Application â
+        Start My Application →
       </button>
 
       <p className="welcome-trust">
-        ð Your information is protected by bank-level encryption and never sold.
+        🔒 Your information is protected by bank-level encryption and never sold.
       </p>
     </div>
   )
